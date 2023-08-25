@@ -1,0 +1,12 @@
+.env
+.venv
+.tmp
+
+*.pyc
+*.pyo
+**/__pycache__
+*.sqlite3
+*.ipynb_checkpoints
+*.ipynb
+.space
+geckodriver.log
