@@ -1,7 +1,7 @@
 name: buscar por ruc
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 */2 * * *'
 jobs:
   bucar_ruc:
     runs-on: ubuntu-latest
