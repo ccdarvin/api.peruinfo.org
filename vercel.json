@@ -1,6 +1,10 @@
 {
   "builds": [
     {
+      "src": "build.sh",
+      "use": "@vercel/static-build"
+    },
+    {
       "src": "peruinfo/wsgi.py",
       "use": "@vercel/python"
     }
@@ -10,8 +14,5 @@
       "src": "/(.*)",
       "dest": "peruinfo/wsgi.py"
     }
-  ],
-  "hooks": {
-    "build:done": "python peruinfo/manage.py migrate"
-  }
+  ]
 }
