@@ -1,14 +1,17 @@
 {
   "builds": [
     {
-      "src": "vercel_app/wsgi.py",
+      "src": "peruinfo/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "vercel_app/wsgi.py"
+      "dest": "peruinfo/wsgi.py"
     }
-  ]
+  ],
+  "hooks": {
+    "build:done": "python peruinfo/manage.py migrate"
+  }
 }
